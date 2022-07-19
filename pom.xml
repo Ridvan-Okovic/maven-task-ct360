@@ -6,11 +6,60 @@
 
     <groupId>org.comtrade</groupId>
     <artifactId>helloWorld</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>helloWorldChild1</module>
+        <module>helloWorldChild2</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jibx</groupId>
+                    <artifactId>jibx-maven-plugin</artifactId>
+                    <version>1.2.4</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>bind</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.micronaut.views</groupId>
+                <artifactId>micronaut-views-core</artifactId>
+                <version>3.4.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>2.1.212</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>8.0.1</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
 </project>
