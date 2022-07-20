@@ -11,7 +11,7 @@ b. Which command should you use if you only want to execute tests?
    Command:    mvn test
    
 c. Where is the .jar file stored?
-   The jar file is sotred at: C:\Users\ridvano\.m2\repository\org\comtrade\helloWorld\1.0-SNAPSHOT
+   The jar files are stored at: C:\Users\ridvano\.m2\repository\org\comtrade\helloWorldChild1\1.0-SNAPSHOT and C:\Users\ridvano\.m2\repository\org\comtrade\helloWorldChild2\1.0-SNAPSHOT
 
 Task 9.
 Re-build the projects (same as in step 7.)
